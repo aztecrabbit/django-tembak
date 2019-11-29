@@ -1,0 +1,29 @@
+{% extends "tembak/xl_base_generic.html" %}
+
+{% block content %}    
+	
+	<form class="middle-center" action="{% url 'tembak:xl-index' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="msisdn" value="{{ request.session.tembak_xl.msisdn }}" disabled>
+        <textarea disabled>{{ request.session.tembak_xl.session_id }}</textarea>
+        {{ form.package_id.errors }}
+        {{ form.package_id }}
+		<input type="submit" value="Send">
+
+		{% if request.GET.success %}
+			<div class="info info-success">{{ request.GET.success }}</div>
+		{% endif %}
+
+		{% if request.GET.warning %}
+			<div class="info info-warning">{{ request.GET.warning }}</div>
+		{% endif %}
+
+		{% if request.GET.error %}
+			<div class="info info-error">{{ request.GET.error }}</div>
+		{% endif %}
+
+		<a href="{% url 'tembak:xl-signout' %}" class="button button-signout">Sign out</a>
+
+	</form>
+
+{% endblock %}

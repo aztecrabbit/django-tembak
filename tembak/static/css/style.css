@@ -1,0 +1,124 @@
+
+* {
+    font-family: Segoe UI, "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+    height: 100%;
+}
+
+[clear] {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+div {
+    overflow-wrap: break-word;
+}
+
+a[href] {
+    text-decoration: none;
+    color: inherit;
+}
+
+input, .button, textarea,
+ul.errorlist > li
+{
+    line-height: 20px;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #dadada;
+}
+
+input[type=submit], .button {
+    padding: 5px 20px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    min-height: 82px;
+    min-height: 82px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    outline: none;
+}
+
+menu, ul, li {
+    list-style: none;
+}
+
+
+/****/
+
+.middle-center {
+    position: absolute;
+    top: 30%; left: 50%;
+    transform: translate(-50%, -30%);
+
+    width: 300px;
+    padding: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.middle-center > ul.errorlist > li {
+    background-color: #FFD2D2;
+    color: #D8000C;
+    border: 1px solid #D8000C;
+}
+
+.middle-center > ul.errorlist > li,
+.middle-center textarea,
+.middle-center input {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+}
+.middle-center .button {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.middle-center input[type=submit] {
+    margin-bottom: 0px;
+}
+
+.button {
+    text-align: center;
+    background-color: #dadada;
+    display: block;
+}
+
+.button-signout {
+    margin-top: 6px;
+    margin-bottom: 0px !important;
+}
+
+/**/
+
+.info {
+    padding: 6px 12px;
+    margin-top: 6px;
+}
+.info-success {
+    background-color: #d2ffd5;
+    color: #00b935;
+    border: 1px solid #00b935;
+}
+.info-warning {
+    background-color: #feffd2;
+    color: #b99e00;
+    border: 1px solid #b99e00;
+}
+.info-error {
+    background-color: #FFD2D2;
+    color: #D8000C;
+    border: 1px solid #D8000C;
+}
