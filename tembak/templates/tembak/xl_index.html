@@ -6,6 +6,8 @@
         {% csrf_token %}
         <input type="text" name="msisdn" value="{{ request.session.tembak_xl.msisdn }}" disabled>
         <textarea disabled>{{ request.session.tembak_xl.session_id }}</textarea>
+        {{ form.subscriber_number.errors }}
+        {{ form.subscriber_number }}
         {{ form.package_id.errors }}
         {{ form.package_id }}
 		<input type="submit" value="Send">

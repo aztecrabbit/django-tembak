@@ -1,7 +1,7 @@
 from django.shortcuts import render
+from django.utils import timezone
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from django.utils import timezone
 
 from tembak.forms import XlSigninForm, XlSendPackageForm
 
@@ -27,6 +27,7 @@ def xl_index(request):
             session_id = request.session['tembak_xl']['session_id']
             request_id = timezone.now().now().strftime('%Y%m%d%H%M%S')
             package_id = form.cleaned_data['package_id']
+            subscriber_number = form.cleaned_data['subscriber_number']
 
             content = {
                 "Header": None,
@@ -45,7 +46,7 @@ def xl_index(request):
                     },
                     "XBOXRequest": {
                         "requestName": "GetSubscriberMenuId",
-                        "Subscriber_Number": "1219456993",
+                        "Subscriber_Number": subscriber_number,
                         "Source": "mapps",
                         "Trans_ID": request_id,
                         "Home_POC": "JK0",

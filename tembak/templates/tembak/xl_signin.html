@@ -2,12 +2,12 @@
 
 {% block content %}    
 
-    <form class="middle-center" action="" method="POST">
+    <form class="middle-center" action="{% url 'tembak:xl-signin' %}" method="POST">
         {% csrf_token %}
-        {{ form.msisdn.errors}}
-        {{ form.msisdn}}
-        {{ form.otp.errors}}
-        {{ form.otp}}
+        {{ form.msisdn.errors }}
+        {{ form.msisdn }}
+        {{ form.otp.errors }}
+        {{ form.otp }}
         <a class="button">Request otp</a>
         <input type="submit" value="Sign in">
 
