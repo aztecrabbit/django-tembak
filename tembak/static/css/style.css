@@ -91,6 +91,7 @@ menu, ul, li {
 }
 
 .button {
+    cursor: default;
     text-align: center;
     background-color: #dadada;
     display: block;
