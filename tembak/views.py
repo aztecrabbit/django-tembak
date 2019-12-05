@@ -8,9 +8,7 @@ from tembak.forms import XlSigninForm, XlSendPackageForm
 import requests
 import json
 
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 def index(request):
     return HttpResponse(reverse('tembak:index'))
@@ -69,7 +67,7 @@ def xl_index(request):
                 "reloadType": "",
                 "reloadAmt": "",
                 "packageAmt": "0",
-                "platform": "04",
+                "platform": "02",
                 "appVersion": "3.8.2",
                 "sourceName": "Firefox",
                 "sourceVersion": "",
